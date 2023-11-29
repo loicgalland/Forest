@@ -1,4 +1,5 @@
 import Input from "../components/Input";
+import PopUp from "../components/PopUp";
 import {useState} from "react";
 import {Link} from "react-router-dom";
 export default function Login(){
@@ -17,7 +18,7 @@ export default function Login(){
                            placeholder="Mot de passe..."
                     />
                     <div className="flex align-middle mt-2">
-                        <input type="checkbox" onClick={handleVisible} />
+                        <input type="checkbox" onClick={handleVisible} className="checkbox"/>
                         <span  className="text-xs mx-2">{isVisible ? "Voir le mot de passe" : "Cacher le mot de passe"}</span>
                     </div>
                 </div>
@@ -25,6 +26,7 @@ export default function Login(){
             </form>
             <span className="font-xl text-center">Vous n'avez pas encore de compte ?</span>
             <Link to="/signin" className="text-orange-500 bg-white p-2 rounded-lg border-solid border-orange-500 border mx-4 text-center hover:bg-orange-500 hover:text-white">Créer un compte</Link>
+            <PopUp />
         </div>
     )
 }

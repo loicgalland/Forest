@@ -5,3 +5,26 @@
 body{
     font-family: "Source Sans Pro", sans-serif;
 }
+.checkbox{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -border-radius: 4px;
+    height: 15px;
+    border-radius: 50px;
+    width: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+.checkbox:checked {
+    background: #fff;
+    position: relative;
+    &:before {
+        font-family: FontAwesome;
+        content: '\f00c';
+        padding-left: 2px;
+        color: #115e59;
+        display: block;
+        font-size: 10px;
+    }
+}

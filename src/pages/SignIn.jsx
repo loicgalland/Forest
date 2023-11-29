@@ -1,4 +1,5 @@
 import Input from "../components/Input";
+import PopUp from "../components/PopUp";
 import {useState} from "react";
 
 export default function SignIn(){
@@ -21,16 +22,17 @@ export default function SignIn(){
                            placeholder="Mot de passe..."
                     />
                     <div className="flex align-middle mt-2">
-                        <input type="checkbox" onClick={handleVisible} />
+                        <input type="checkbox" onClick={handleVisible} className="checkbox"/>
                         <span  className="text-xs mx-2">{isVisible ? "Voir le mot de passe" : "Cacher le mot de passe"}</span>
                     </div>
                 </div>
                 <button type="submit" className={`text-white bg-orange-500 p-2 rounded-lg ${!isAccepted ? "bg-orange-400" : ""}`} disabled={!isAccepted}>Se Connecter</button>
                 <div className="flex align-middle">
-                    <input type="checkbox" onClick={handleAccepted}/>
+                    <input type="checkbox" onClick={handleAccepted} className="checkbox"/>
                     <span  className="text-xs mx-2">J'ai lu et accepté les <a href="#" className="text-orange-500 underline">conditions d'utilisations</a></span>
                 </div>
             </form>
+            <PopUp />
         </div>
     )
 }
