@@ -31,7 +31,7 @@ export default function SignIn(){
                     <span  className="text-xs mx-2">J'ai lu et accepté les <a href="#" className="text-orange-500 underline">conditions d'utilisations</a></span>
                 </div>
             </form>
-            <PopUp />
+            <PopUp text="Consultez les dernières recommandations de voyage relatives au COVID-19"/>
         </div>
     )
 }

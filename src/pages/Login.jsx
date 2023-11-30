@@ -25,7 +25,7 @@ export default function Login(){
             </form>
             <span className="font-xl text-center">Vous n'avez pas encore de compte ?</span>
             <Link to="/signin" className="text-orange-500 bg-white p-2 rounded-lg border-solid border-orange-500 border mx-4 text-center hover:bg-orange-500 hover:text-white">Créer un compte</Link>
-            <PopUp />
+            <PopUp text='Consultez les dernières recommandations de voyage relatives au COVID-19' />
         </div>
     )
 }

@@ -10,8 +10,8 @@ export default function NavBar(){
         setIsHome(false)
     }
     return(
-        <nav className="flex justify-between items-center bg-teal-800 py-2 px-5 text-white">
-            {isHome ? <Link to="/"> <img src={ForestLogo} alt="Logo Forest" onClick={showForest}/></Link> : <Link to="/" onClick={showForest}><i className="fa-solid fa-chevron-left"></i></Link>}
+        <nav className="flex justify-between items-center bg-teal-800 py-2 px-5 text-white sticky top-0 w-full">
+           <Link to="/"> <img src={ForestLogo} alt="Logo Forest" onClick={showForest}/></Link>
             <Link to="/login" className="flex" onClick={showPrevious}>
                 <i className="fa-regular fa-user text-xl"></i>
             </Link>
