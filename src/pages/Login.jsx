@@ -1,4 +1,3 @@
-import Input from "../components/Input";
 import PopUp from "../components/PopUp";
 import {useState} from "react";
 import {Link} from "react-router-dom";
@@ -9,9 +8,9 @@ export default function Login(){
     }
     return(
         <div className="py-2 px-5 flex flex-col gap-3">
-            <h2 className="text-xl my-3 text-center">Se connecter</h2>
+            <h2 className="text-xl my-3 text-center font-semibold">Se connecter</h2>
             <form className="py-4 px-4 bg-teal-800 text-white rounded-lg flex flex-col gap-4">
-                <Input type="email" Placeholder="Adresse mail..." />
+                <input type="email" name="email" className="bg-white rounded-lg p-2 w-full text-black z-0" placeholder="Adresse mail..."/>
                 <div>
                     <input type={`${isVisible ? 'text' : 'password'}`}
                            className="bg-white rounded-lg p-2 w-full text-black relative"
@@ -19,7 +18,7 @@ export default function Login(){
                     />
                     <div className="flex align-middle mt-2">
                         <input type="checkbox" onClick={handleVisible} className="checkbox"/>
-                        <span  className="text-xs mx-2">{isVisible ? "Voir le mot de passe" : "Cacher le mot de passe"}</span>
+                        <span  className="text-xs mx-2">Voir le mot de passe</span>
                     </div>
                 </div>
                 <button type="submit" className="text-white bg-orange-500 p-2 rounded-lg">Se Connecter</button>
